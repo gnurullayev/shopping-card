@@ -1,0 +1,30 @@
+.menu {
+    width: 263px;
+    min-height: calc(100vh - 70px);
+    padding-top: 34px;
+    background: #3D639D;
+    border-radius: 0px 30px 0px 0px;
+}
+
+.menu_list {
+    display: flex;
+    flex-direction: column;
+    padding-left: 44px;
+}
+
+.menu_item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 20px;
+    border-radius: 50px 0 0 50px;
+}
+
+.menu_text {
+    color: #fff;
+}
+
+.active {
+    color: #3D639D;
+    background-color: #fff;
+}

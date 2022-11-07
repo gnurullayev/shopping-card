@@ -1,0 +1,17 @@
+.good_list {
+    width: 100%;
+    max-width: 100vw;
+    min-height: calc(100vh - 140px);
+    padding: 14px 28px;
+    padding-right: 60px;
+    background-color: #F3F5F8;
+    border-radius: 6px;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    color: #3D639D;
+}
