@@ -1,4 +1,4 @@
-.good_list {
+.goods_inner {
     width: 100%;
     max-width: 100vw;
     min-height: calc(100vh - 140px);
@@ -6,6 +6,7 @@
     padding-right: 60px;
     background-color: #F3F5F8;
     border-radius: 6px;
+    overflow: hidden;
 }
 
 .title {
@@ -14,4 +15,51 @@
     font-size: 22px;
     line-height: 26px;
     color: #3D639D;
+}
+
+.goods_count {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.3px;
+    color: #262728;
+}
+
+.goods_list {
+    display: grid;
+    grid-template-columns: repeat(4,210px);
+    justify-content: space-between;
+    gap: 20px;
+    padding-left: 0;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.pagination_arrov_left {
+    border: 0;
+    background-color: transparent;
+}
+
+.pagination_list {
+    display: flex;
+    align-items: center;
+}
+
+.pagination_item {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.active {
+    background: #00C48C;
 }

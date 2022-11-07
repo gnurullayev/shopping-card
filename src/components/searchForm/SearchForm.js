@@ -5,14 +5,14 @@ import search from "../../assets/Search.svg"
 const SearchForm = () => {
   return (
     <form className={style.form}>
-        <div class={style.input_group}>
+        <div className={style.input_group}>
             <input 
-            type="text" class={style.form_control}  
+            type="text" className={style.form_control}  
             placeholder='Поиск по названию товара'
             aria-label='Поиск по названию товара'
             />
 
-            <button class={style.input_group_text} id="addon-wrapping">
+            <button className={style.input_group_text} id="addon-wrapping">
                 <img src={search} alt="Search" />
             </button>
         </div>

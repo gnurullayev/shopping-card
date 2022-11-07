@@ -1,3 +1,7 @@
+.form {
+    margin-bottom: 30px;
+}
+
 .input_group {
     position: relative;
     display: flex;
