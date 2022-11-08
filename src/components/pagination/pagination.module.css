@@ -1,0 +1,31 @@
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.pagination_arrov_left {
+    border: 0;
+    background-color: transparent;
+}
+
+.pagination_list {
+    display: flex;
+    align-items: center;
+}
+
+.pagination_item {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.active {
+    background: #00C48C;
+}
