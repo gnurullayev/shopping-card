@@ -1,10 +1,12 @@
+import { Route, Routes} from 'react-router-dom';
 import './App.css';
-import BreadCrumb from './components/breadcrumb/BreadCrumb';
+import GoodsDetalis from './components/goadsDatails/GoodsDetalis';
 import GoodsList from './components/goodsList/GoodsList';
 import Header from './components/header/Header';
 import Menu from './components/menu/Menu';
 
 function App() {
+
   return (
     <div className="App">
       <Header/>
@@ -15,9 +17,11 @@ function App() {
             </div>
 
             <div className="">
-              <BreadCrumb/>
-              
-              <GoodsList/>
+              <Routes>
+                <Route path='/checkout' element={<GoodsList/>}/>
+                <Route path='/checkout/:id' element={<GoodsDetalis/>}/>
+              </Routes>
+
             </div>
           </div>
       </div>

@@ -1,12 +1,13 @@
 
 import goodsData from "../components/goodListItem/goodsListData";
-import { FIND_GOODS, PAGE_GOODS, } from "./type";
+import { CHANGE_ID, FIND_GOODS, PAGE_GOODS, } from "./type";
 
 const initialStata = {
     goods:[...goodsData],
     pageGoods:goodsData.slice(0,8),
     findGoods:[],
-    page:1
+    page:1,
+    id:null
 }
 
 export default function goodsReducer (initialStat,{type, payload}) {
@@ -14,7 +15,6 @@ export default function goodsReducer (initialStat,{type, payload}) {
     switch(type) {
         case FIND_GOODS :
             const findData = payload !== ""? state.goods.filter(el => el.name.toLowerCase().includes(payload.toLowerCase())) : state.pageGoods
-            console.log(findData);
             return {
                 ...state,
                 findGoods: findData,
@@ -25,6 +25,11 @@ export default function goodsReducer (initialStat,{type, payload}) {
             return {
                 ...state,
                 pageGoods: pageData,
+            }
+        case CHANGE_ID:
+            return {
+                ...state,
+                id: payload,
             }
         default:
             return state   

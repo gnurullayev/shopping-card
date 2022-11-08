@@ -1,33 +1,35 @@
-import home from "../../assets/Home.svg"
-import bag from "../../assets/Bag.svg"
-import document from "../../assets/Document.svg"
-import star from "../../assets/Star.svg"
-import buy from "../../assets/Buy.svg"
+import {HiOutlineHome} from "react-icons/hi"
+import {BiShoppingBag} from "react-icons/bi"
+import {CgFileDocument} from "react-icons/cg"
+import {FiStar} from "react-icons/fi"
+import {SlBasket} from "react-icons/sl"
+
+import styles from "./menu.module.css"
 
 export const data = [
     {
-        icon:home,
+        icon:<HiOutlineHome className={styles.menu_icon}/>,
         name:"Главная",
         pathname:"/"
     },
     {
-        icon:document,
+        icon:<CgFileDocument className={styles.menu_icon}/>,
         name:"Заказы",
         pathname:"/orders"
     },
     {
-        icon:bag,
+        icon:<BiShoppingBag className={styles.menu_icon}/>,
         name:"Товары",
         pathname:"/products"
     },
     {
-        icon:star,
+        icon:<FiStar className={styles.menu_icon}/>,
         name:"Отзывы",
         pathname:"/reviews"
     },
 
     {
-        icon:buy,
+        icon:<SlBasket className={styles.menu_icon}/>,
         name:"Оформить заказ",
         pathname:"/checkout"
     },

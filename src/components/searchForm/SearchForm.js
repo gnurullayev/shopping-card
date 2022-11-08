@@ -8,7 +8,7 @@ import search from "../../assets/Search.svg"
 const SearchForm = () => {
   const [value,setValue] = useState("")
   const dispatch = useDispatch()
-  const {pathname,search} = useLocation()
+  const {pathname} = useLocation()
   const navigate = useNavigate()
 
   const goodsFind = (evt) => {

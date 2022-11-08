@@ -1,7 +1,10 @@
 import React, { forwardRef } from 'react'
+import { Link } from 'react-router-dom'
 import style from "./goodListItem.module.css"
 
-const GoodsListItem = forwardRef(({name,price,price_percentage,percentage_date,poster,acsia}, ref) => {
+const GoodsListItem = forwardRef(({name,price,price_percentage,percentage_date,poster,acsia,id}, ref) => {
+
+
 
   const item = acsia.map((el,i) => {
     if(el.isAcsia) {
@@ -14,28 +17,30 @@ const GoodsListItem = forwardRef(({name,price,price_percentage,percentage_date,p
   })
 
   return (
-    <li className={style.card} ref={ref}>
-      <div className={style.card_header}>
-        <img className={style.card_img} src={poster} alt={name} />
+    <Link to={`/checkout/${id}`}>
+      <li className={style.card} ref={ref}>
+        <div className={style.card_header}>
+          <img className={style.card_img} src={poster} alt={name} />
 
-        <ul className={style.card_acsia_imgs}>
-          {
-            item
-          }
-        </ul>
-      </div>
+          <ul className={style.card_acsia_imgs}>
+            {
+              item
+            }
+          </ul>
+        </div>
 
-      <div className={style.card_body}>
-        <h4 className={style.card_title}>{name}</h4>
+        <div className={style.card_body}>
+          <h4 className={style.card_title}>{name}</h4>
 
-        <p className={style.price}>{price}</p>
+          <p className={style.price}>{price}</p>
 
-        <p>
-          <span className={style.price_percentage}>{price_percentage}</span>
-          <span className={style.price_data}>{percentage_date}</span>
-        </p>
-      </div>
-    </li>
+          <p>
+            <span className={style.price_percentage}>{price_percentage}</span>
+            <span className={style.price_data}>{percentage_date}</span>
+          </p>
+        </div>
+      </li>
+    </Link>
   )
 })
 

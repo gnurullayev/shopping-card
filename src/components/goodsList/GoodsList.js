@@ -7,6 +7,7 @@ import styles from "./goodsList.module.css"
 
 import { PageGoods} from '../../redux/action';
 import Pagination from '../pagination/Pagination';
+import BreadCrumb from '../breadcrumb/BreadCrumb';
 
 const GoodsList = () => {
   const [page,setPage] = useState(1)
@@ -20,6 +21,7 @@ const GoodsList = () => {
 
   return (
     <div className={styles.goods_inner}>
+      <BreadCrumb name = "Оформить заказ"/>
       <h2 className={styles.title}>Оформить заказ</h2>
       <SearchForm/>
       <p className={styles.goods_count}>Все товары ({goods.length})</p>

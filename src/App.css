@@ -6,9 +6,6 @@
 
 .breadcrumb {
   align-items: center;
-  height: 70px;
-  padding-top: 36px !important;
-  padding-left: 18px !important;
 }
 
 .active {
@@ -20,6 +17,5 @@
 
 .breadcrumb-link {
   font-size: 13px;
-  line-height: 14px;
   color: #BBC2D0 !important;
 }
